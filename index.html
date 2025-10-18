@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications | Zhang Hao</title>
+  <style>
+    :root{
+      --bg:#0b0c10;--card:#12141a;--text:#e9edf1;--muted:#b6c2d9;--brand:#6ee7ff;--accent:#a78bfa;
+      --chip-bg:#1b2030;--chip:#c7d2fe;--link:#8be9fd;--ok:#34d399;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:radial-gradient(1200px 800px at 20% -10%,#172033 0%,#0b0c10 45%),var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1040px;margin:40px auto;padding:0 20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent));}
+    h1{font-size:1.8rem;margin:0}
+    nav a{margin-left:18px;opacity:.9}
+    .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 24px}
+    .tab{padding:8px 12px;border-radius:999px;background:var(--chip-bg);color:var(--chip);cursor:pointer;border:1px solid rgba(255,255,255,.06)}
+    .tab.active{outline:2px solid var(--accent);}
+    .year-group{margin:28px 0;}
+    .year-title{font-size:1.25rem;margin:0 0 12px;color:#cbd5e1;border-left:4px solid var(--accent);padding-left:10px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 16px;margin:10px 0;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .title{font-weight:600;margin:0 0 6px}
+    .meta{color:var(--muted);font-size:.95rem}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .badge{font-size:.85rem;padding:6px 10px;border-radius:10px;background:#0f172a;border:1px solid rgba(255,255,255,.1)}
+    .badge.ok{border-color:rgba(52,211,153,.35);color:var(--ok)}
+    .searchbar{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid rgba(255,255,255,.08);padding:10px 12px;border-radius:14px}
+    .searchbar input{flex:1;background:transparent;border:none;outline:none;color:var(--text)}
+    .footer{opacity:.7;margin:40px 0 10px;font-size:.9rem}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar"></div>
+        <div>
+          <h1>Publications</h1>
+          <div class="meta">Zhang Hao · School of Public Health · Proteomics & PD</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Research</a>
+        <a href="#">People</a>
+        <a href="#" aria-current="page">Publications</a>
+      </nav>
+    </header>
+
+    <div class="searchbar" role="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/></svg>
+      <input id="q" placeholder="Search title / author / journal… (regex ok)" />
+    </div>
+
+    <div class="tabs" id="year-tabs"></div>
+
+    <div id="list"></div>
+
+    <div class="footer">© <span id="year"></span> Zhang Hao. Built with plain HTML+JS. Deploy on GitHub Pages.</div>
+  </div>
+
+  <script>
+    // --- 1) Put your publications here (or load from JSON) ---
+    const PUBS = [
+      {year: 2025, title: "Hearing loss proteomic score predicts PD risk in UK Biobank",
+       authors: "Zhang Hao*, …", journal: "NPJ Parkinson's Disease", note:"In press",
+       links: {doi:"https://doi.org/xx.xxxx/npjd-xxxxx", pdf:"/papers/hao2025.pdf", code:"https://github.com/your/repo"}},
+      {year: 2024, title: "Transfer learning of proteomic biomarkers for PD in hearing-loss subgroup",
+       authors: "Zhang Hao*, …", journal: "CNS Neuroscience & Therapeutics",
+       links: {doi:"https://doi.org/xx.xxxx/cnsnt-xxxx", pdf:"/papers/hao2024.pdf"}},
+      {year: 2023, title: "High-dimensional mediation between lifestyle, proteome and PD",
+       authors: "Zhang Hao, …", journal: "Stat Med", links: {preprint:"https://arxiv.org/abs/xxx"}},
+    ];
+
+    // --- 2) Build year tabs ---
+    const years = [...new Set(PUBS.map(p=>p.year))].sort((a,b)=>b-a);
+    const tabs = document.getElementById('year-tabs');
+    const list = document.getElementById('list');
+    const q = document.getElementById('q');
+
+    function render(activeYears){
+      list.innerHTML = '';
+      (activeYears||years).forEach(y=>{
+        const group = document.createElement('section');
+        group.className='year-group';
+        const h = document.createElement('h2'); h.className='year-title'; h.textContent = y; group.appendChild(h);
+        PUBS.filter(p=>p.year===y && filterMatch(p, q.value)).forEach(p=>{
+          const card=document.createElement('article'); card.className='card';
+          card.innerHTML=`
+            <div class="title"><a target="_blank" rel="noopener" href="${p.links?.doi||p.links?.preprint||'#'}">${p.title}</a></div>
+            <div class="meta">${p.authors} · <em>${p.journal||''}</em> ${p.note?('· '+p.note):''}</div>
+            <div class="badges">${badgeLinks(p.links)}</div>`;
+          group.appendChild(card);
+        });
+        // hide empty year groups
+        if(group.children.length>1){ list.appendChild(group); }
+      });
+    }
+
+    function badgeLinks(links={}){
+      const map = {doi:'DOI', pdf:'PDF', code:'Code', data:'Data', preprint:'Preprint', supp:'Supp'};
+      return Object.entries(map).filter(([k])=>links[k]).map(([k,label])=>
+        `<a class="badge" href="${links[k]}" target="_blank" rel="noopener">${label}</a>`
+      ).join('');
+    }
+
+    function filterMatch(p, query){
+      if(!query) return true;
+      try{ const re = new RegExp(query, 'i'); return re.test(p.title)||re.test(p.authors)||re.test(p.journal||''); }
+      catch(e){ return (p.title+p.authors+(p.journal||'')).toLowerCase().includes(query.toLowerCase()); }
+    }
+
+    years.forEach(y=>{
+      const b=document.createElement('button'); b.className='tab'; b.textContent=y; b.dataset.year=y;
+      b.addEventListener('click',()=>{
+        document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+        b.classList.add('active'); render([+y]);
+      });
+      tabs.appendChild(b);
+    });
+    // "All" tab
+    const all=document.createElement('button'); all.className='tab active'; all.textContent='All';
+    all.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active')); all.classList.add('active'); render();});
+    tabs.prepend(all);
+
+    q.addEventListener('input',()=>{
+      const active = document.querySelector('.tab.active');
+      if(active && active.textContent!=='All') render([+active.dataset.year]); else render();
+    });
+
+    render();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
