@@ -5,57 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ZENG LAB — Contact</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px;margin-top:16px}
+    .row{display:grid;grid-template-columns:1fr;gap:10px}
+    .item{display:flex;gap:10px;align-items:flex-start}
+    .item b{min-width:110px;display:inline-block}
+    .link a{word-break:break-all}
+  </style>
 </head>
 <body>
 <div class="wrapper">
   <aside class="sidebar">
-  <div class="brand"><div class="logo" aria-hidden="true"></div><span>ZENG LAB</span></div>
-  <div class="avatar" role="img" aria-label="Lab cover"></div>
-  <div class="bio">
-    Department of Biostatistics, School of Public Health<br/>
-    Xuzhou Medical University
-  </div>
-  <nav class="menu">
-    <a href="index.html">ZENG LAB · Biostatistics</a>
-    <a href="news.html">NEWS</a>
-    <a href="research.html">RESEARCH</a>
-    <a href="people.html">PEOPLE</a>
-    <a href="publications.html">PUBLICATIONS</a>
-    <a href="contact.html">CONTACT</a>
-  </nav>
-  <div class="contacts">
-    <div>Email: <a href="mailto:zpstat@xzhmu.edu.cn">zpstat@xzhmu.edu.cn</a></div>
-  </div>
-</aside>
-
+    <div class="brand"><div class="logo" aria-hidden="true"></div><span>ZENG LAB</span></div>
+    <div class="avatar" role="img" aria-label="Lab avatar"></div>
+    <div class="bio">School of Public Health<br/>Computational Epidemiology & Proteomics</div>
+    <nav class="menu">
+      <a href="index.html">ZENG LAB</a>
+      <a href="news.html">NEWS</a>
+      <a href="research.html">RESEARCH</a>
+      <a href="people.html">PEOPLE</a>
+      <a href="publications.html">PUBLICATIONS</a>
+      <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+    <div class="contacts">
+      <div>Email: <a href="mailto:contact@zenglab.org">contact@zenglab.org</a></div>
+      <div>Google Scholar · GitHub · X</div>
+    </div>
+  </aside>
   <main class="container">
-    
-<header class="hero">
-  <h1>Contact</h1>
-  <p>School of Public Health · ZENG LAB</p>
-</header>
-<section>
-  <div class="grid">
-    <div class="card" style="grid-column:span 7">
-      <h3>Get in touch</h3>
-      <p>Email: <a href="mailto:contact@zenglab.org">contact@zenglab.org</a><br/>
-         Address: 123 Health Rd, City, Country</p>
-      <p>For prospective students: send a CV, transcripts, and a brief statement of research interests.</p>
-    </div>
-    <div class="card" style="grid-column:span 5">
-      <h3>Follow</h3>
-      <p>
-        <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> ·
-        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="https://x.com" target="_blank" rel="noopener">X/Twitter</a>
-      </p>
-    </div>
-  </div>
-</section>
-<footer>© <span id="year"></span> ZENG LAB.</footer>
+    <header class="hero">
+      <h1>Contact</h1>
+      <p>Get in touch or follow our updates.</p>
+    </header>
 
+    <section class="card">
+      <div class="row">
+        <div class="item link">
+          <b>GitHub</b>
+          <a href="https://github.com/biostatpzeng" target="_blank" rel="noopener">https://github.com/biostatpzeng</a>
+        </div>
+        <div class="item link">
+          <b>ORCID</b>
+          <a href="http://orcid.org/0000-0003-2710-3440" target="_blank" rel="noopener">http://orcid.org/0000-0003-2710-3440</a>
+        </div>
+        <div class="item">
+          <b>Email</b>
+          <a href="mailto:zpstat@xzhmu.edu.cn">zpstat@xzhmu.edu.cn</a>
+        </div>
+        <div class="item">
+          <b>Address</b>
+          <div>
+            Department of Biostatistics, School of Public Health<br/>
+            Xuzhou Medical University<br/>
+            Xuzhou, Jiangsu 221004, China
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>© <span id="year"></span> ZENG LAB.</footer>
   </main>
 </div>
-<script>document.querySelectorAll('#year').forEach(s=>s.textContent=new Date().getFullYear());</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
