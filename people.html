@@ -5,61 +5,263 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ZENG LAB — People</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    .group { margin-top: 18px; }
+    .grid-people { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .person { background:#fff; border:1px solid var(--border); border-radius:16px; padding:12px; display:flex; gap:12px; align-items:center; }
+    .photo img { width:64px; height:64px; object-fit:cover; border-radius:12px; border:1px solid var(--border); }
+    .p-name { font-weight:600; }
+    .p-email a { color: var(--brand); }
+  </style>
 </head>
 <body>
 <div class="wrapper">
   <aside class="sidebar">
-    
-<div class="brand"><div class="logo" aria-hidden="true"></div><span>ZENG LAB</span></div>
-<div class="avatar" role="img" aria-label="Lab avatar"></div>
-<div class="bio">
-  School of Public Health<br/>
-  Computational Epidemiology & Proteomics
-</div>
-<nav class="menu">
-  <a href="index.html" class="">ZENG LAB</a>
-  <a href="news.html" class="">NEWS</a>
-  <a href="research.html" class="">RESEARCH</a>
-  <a href="people.html" class="active">PEOPLE</a>
-  <a href="publications.html" class="">PUBLICATIONS</a>
-  <a href="contact.html" class="">CONTACT</a>
-</nav>
-<div class="contacts">
-  <div>Email: <a href="mailto:contact@zenglab.org">contact@zenglab.org</a></div>
-  <div>Google Scholar · GitHub · X</div>
-</div>
-
+    <div class="brand"><div class="logo" aria-hidden="true"></div><span>ZENG LAB</span></div>
+    <div class="avatar" role="img" aria-label="Lab avatar"></div>
+    <div class="bio">School of Public Health<br/>Computational Epidemiology & Proteomics</div>
+    <nav class="menu">
+      <a href="index.html">ZENG LAB</a>
+      <a href="news.html">NEWS</a>
+      <a href="research.html">RESEARCH</a>
+      <a href="people.html" class="active">PEOPLE</a>
+      <a href="publications.html">PUBLICATIONS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="contacts">
+      <div>Email: <a href="mailto:contact@zenglab.org">contact@zenglab.org</a></div>
+      <div>Google Scholar · GitHub · X</div>
+    </div>
   </aside>
   <main class="container">
-    
-<header class="hero">
-  <h1>People</h1>
-  <p>We are a small, ambitious team combining statistics, epidemiology, and computing.</p>
-</header>
-<section>
-  <div class="grid">
-    <div class="person">
-      <div class="avatar" aria-hidden="true"></div>
-      <div>
-        <h4>Ping Zeng, PhD</h4>
-        <div class="role">PI, Professor</div>
-        <p>Email: <a href="mailto:ping.zeng@xmu.edu">ping.zeng@xmu.edu</a></p>
-      </div>
-    </div>
-    <div class="person">
-      <div class="avatar" aria-hidden="true"></div>
-      <div>
-        <h4>Hao Zhang</h4>
-        <div class="role">PhD Candidate</div>
-        <p>Email: <a href="mailto:hao.zhang@xmu.edu">hao.zhang@xmu.edu</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-<footer>© <span id="year"></span> ZENG LAB.</footer>
+    <header class="hero">
+      <h1>People</h1>
+      <p>Faculty, PhD students, Master students, and Alumni. Photos are placeholders—drop images into <code>images/people/</code> to show portraits.</p>
+    </header>
 
+    
+    <section class="group">
+      <h2>Faculty / 老师</h2>
+      <div class="grid-people">
+        
+      <div class="person">
+        <div class="photo"><img src="images/people/曾平.jpg" alt="曾平 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">曾平</div>
+          <div class="p-email"><a href="mailto:zpstat@xzhmu.edu.cn">zpstat@xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/王婷.jpg" alt="王婷 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">王婷</div>
+          <div class="p-email"><a href="mailto:wangtgw@163.com">wangtgw@163.com</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/郑楚.jpg" alt="郑楚 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">郑楚</div>
+          <div class="p-email"><a href="mailto:zhengchufory@xzhmu.edu.cn">zhengchufory@xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/王可.jpg" alt="王可 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">王可</div>
+          <div class="p-email"><a href="mailto:xzmuwk@xzhmu.edu.cn">xzmuwk@xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+      </div>
+    </section>
+    
+    
+    <section class="group">
+      <h2>PhD Students / 博士生</h2>
+      <div class="grid-people">
+        
+      <div class="person">
+        <div class="photo"><img src="images/people/张浩.jpg" alt="张浩 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">张浩</div>
+          <div class="p-email"><a href="mailto:303101210007@stu.xzhmu.edu.cn">303101210007@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/袁郭静.jpg" alt="袁郭静 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">袁郭静</div>
+          <div class="p-email"><a href="mailto:304110210057@stu.xzhmu.edu.cn">304110210057@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/刘颖.jpg" alt="刘颖 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">刘颖</div>
+          <div class="p-email"><a href="mailto:302110110924@stu.xzhmu.edu.cn">302110110924@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+      </div>
+    </section>
+    
+    
+    <section class="group">
+      <h2>Master Students / 硕士生</h2>
+      <div class="grid-people">
+        
+      <div class="person">
+        <div class="photo"><img src="images/people/刘雨昕.jpg" alt="刘雨昕 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">刘雨昕</div>
+          <div class="p-email"><a href="mailto:303110110920@stu.xzhmu.edu.cn">303110110920@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/严羽.jpg" alt="严羽 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">严羽</div>
+          <div class="p-email"><a href="mailto:303110120945@stu.xzhmu.edu.cn">303110120945@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/祁继柯.jpg" alt="祁继柯 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">祁继柯</div>
+          <div class="p-email"><a href="mailto:303110110921@stu.xzhmu.edu.cn">303110110921@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/林华.jpg" alt="林华 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">林华</div>
+          <div class="p-email"><a href="mailto:304110120919@stu.xzhmu.edu.cn">304110120919@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/姜昱辰.jpg" alt="姜昱辰 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">姜昱辰</div>
+          <div class="p-email"><a href="mailto:304110110881@stu.xzhmu.edu.cn">304110110881@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/王心怡.jpg" alt="王心怡 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">王心怡</div>
+          <div class="p-email"><a href="mailto:304110110893@stu.xzhmu.edu.cn">304110110893@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/姚杰.jpg" alt="姚杰 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">姚杰</div>
+          <div class="p-email"><a href="#">12345678</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/张飞.jpg" alt="张飞 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">张飞</div>
+          <div class="p-email"><a href="#">12345678</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/常舒雯.jpg" alt="常舒雯 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">常舒雯</div>
+          <div class="p-email"><a href="#">12345678</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/赵思宇.jpg" alt="赵思宇 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">赵思宇</div>
+          <div class="p-email"><a href="#">12345678</a></div>
+        </div>
+      </div>
+    
+      </div>
+    </section>
+    
+    
+    <section class="group">
+      <h2>Alumni / 已毕业</h2>
+      <div class="grid-people">
+        
+      <div class="person">
+        <div class="photo"><img src="images/people/杲统宇.jpg" alt="杲统宇 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">杲统宇</div>
+          <div class="p-email"><a href="mailto:302110120936@stu.xzhmu.edu.cn">302110120936@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/张硕.jpg" alt="张硕 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">张硕</div>
+          <div class="p-email"><a href="mailto:biostatszhang@163.com">biostatszhang@163.com</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/陈珂莹.jpg" alt="陈珂莹 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">陈珂莹</div>
+          <div class="p-email"><a href="mailto:302110110923@stu.xzhmu.edu.cn">302110110923@stu.xzhmu.edu.cn</a></div>
+        </div>
+      </div>
+    
+
+      <div class="person">
+        <div class="photo"><img src="images/people/蒋舟.jpg" alt="蒋舟 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="info">
+          <div class="p-name">蒋舟</div>
+          <div class="p-email"><a href="mailto:zhoujiang0031@hust.edu.cn">zhoujiang0031@hust.edu.cn</a></div>
+        </div>
+      </div>
+    
+      </div>
+    </section>
+    
+
+    <footer>© <span id="year"></span> ZENG LAB.</footer>
   </main>
 </div>
-<script>document.querySelectorAll('#year').forEach(s=>s.textContent=new Date().getFullYear());</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
