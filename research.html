@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZENG LAB — Research</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="wrapper">
+  <aside class="sidebar">
+    
+<div class="brand"><div class="logo" aria-hidden="true"></div><span>ZENG LAB</span></div>
+<div class="avatar" role="img" aria-label="Lab avatar"></div>
+<div class="bio">
+  School of Public Health<br/>
+  Computational Epidemiology & Proteomics
+</div>
+<nav class="menu">
+  <a href="index.html" class="">ZENG LAB</a>
+  <a href="news.html" class="">NEWS</a>
+  <a href="research.html" class="active">RESEARCH</a>
+  <a href="people.html" class="">PEOPLE</a>
+  <a href="publications.html" class="">PUBLICATIONS</a>
+  <a href="contact.html" class="">CONTACT</a>
+</nav>
+<div class="contacts">
+  <div>Email: <a href="mailto:contact@zenglab.org">contact@zenglab.org</a></div>
+  <div>Google Scholar · GitHub · X</div>
+</div>
+
+  </aside>
+  <main class="container">
+    
+<header class="hero">
+  <h1>Research</h1>
+  <p>Principled methods and applications in computational epidemiology.</p>
+</header>
+<section>
+  <div class="grid">
+    <article class="card">
+      <h3>Proteomic risk modeling for PD in hearing-loss populations</h3>
+      <p>Screen proteomic biomarkers in a general cohort, then adapt models via density-ratio reweighting and similarity-regularized transfer learning.</p>
+      <div class="badge-row"><span class="badge">Elastic Net Cox</span><span class="badge">Re-weighted survival</span><span class="badge">Transfer learning</span></div>
+    </article>
+    <article class="card">
+      <h3>High-dimensional mediation frameworks</h3>
+      <p>Scalable mediation linking lifestyle → proteome → PD, integrating MR-style instruments and composite-null testing.</p>
+      <div class="badge-row"><span class="badge">Mediation</span><span class="badge">MR + Omics</span><span class="badge">Causal triangulation</span></div>
+    </article>
+  </div>
+</section>
+<footer>© <span id="year"></span> ZENG LAB.</footer>
+
+  </main>
+</div>
+<script>document.querySelectorAll('#year').forEach(s=>s.textContent=new Date().getFullYear());</script>
+</body>
+</html>
