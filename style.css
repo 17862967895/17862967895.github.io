@@ -1,62 +1,42 @@
-/* ZENG LAB — minimal white theme with persistent sidebar */
+
 :root{
-  --bg:#ffffff; --text:#0f172a; --muted:#475569;
-  --brand:#0ea5e9; --brand-2:#22c55e; --border:#e2e8f0;
-  --card:#f8fafc; --link:#2563eb;
+  --bg:#f6f7fb;
+  --text:#0f172a;
+  --muted:#475569;
+  --brand:#2563eb;
+  --border:#e5e7eb;
+  --card:#ffffff;
 }
 *{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica Neue,Arial}
-a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
-img{max-width:100%;height:auto;display:block}
-/* Layout */
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
 .wrapper{display:grid;grid-template-columns:280px 1fr;min-height:100vh}
-.sidebar{border-right:1px solid var(--border);padding:22px;position:sticky;top:0;height:100vh}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.1rem;margin-bottom:8px}
-.logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2))}
-.avatar{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#93c5fd,#a7f3d0);margin:14px 0;border:1px solid var(--border)}
-.bio{font-size:.95rem;color:var(--muted);margin-bottom:12px}
-.menu{display:flex;flex-direction:column;gap:8px;margin-top:10px}
-.menu a{padding:8px 10px;border:1px solid var(--border);border-radius:10px;background:#fff}
-.menu a.active{background:var(--card)}
-.contacts{margin-top:16px;font-size:.95rem}
-.container{padding:28px 28px 48px}
-header.hero{padding:8px 0 8px;border-bottom:1px solid var(--border);margin-bottom:16px}
-header.hero h1{font-size:clamp(28px,4vw,42px);margin:0 0 6px}
-header.hero p{margin:0;color:var(--muted)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.chip{padding:6px 10px;background:var(--card);border:1px solid var(--border);border-radius:999px;font-size:.9rem;color:#0f172a}
-section{padding:14px 0 0}
-h2{font-size:1.6rem;margin:18px 0 8px}
-.lead{color:var(--muted);margin:0 0 14px}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-.card{grid-column:span 6;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
-.card h3{margin:0 0 6px;font-size:1.1rem}
-.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.badge{font-size:.85rem;padding:6px 10px;border-radius:10px;background:#eef2ff;border:1px solid #e2e8f0}
-/* Lists */
-.pub{grid-column:span 12;border:1px solid var(--border);border-radius:14px;padding:14px;background:#fff}
-.pub .meta{color:var(--muted);font-size:.95rem;margin-top:4px}
-.pub .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border-radius:10px;background:#f1f5f9;border:1px solid var(--border)}
-.btn:hover{text-decoration:none;background:#e2e8f0}
-.person{grid-column:span 6;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;gap:12px}
-.person .avatar{width:72px;height:72px}
-.person h4{margin:0 0 6px}
-.person .role{color:var(--muted);font-size:.95rem}
-/* News */
-.news-item{grid-column:span 12;border:1px solid var(--border);border-radius:12px;padding:14px;background:#fff;display:flex;gap:14px}
-.news-date{flex:0 0 110px;color:var(--muted)}
-/* Upload */
-.uploader{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:10px}
-.thumb{aspect-ratio:4/3;border:1px solid var(--border);border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#fff}
-/* Footer */
-footer{padding:22px 0;color:var(--muted)}
-/* Responsive */
-@media (max-width: 900px){
-  .wrapper{grid-template-columns:1fr}
-  .sidebar{position:relative;height:auto}
-  .container{padding:20px}
-  .card,.person{grid-column:span 12}
-}
+.sidebar{padding:20px;border-right:1px solid var(--border);background:#fff;position:sticky;top:0;height:100vh}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;margin-bottom:12px}
+.logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),#93c5fd)}
+.avatar{width:100%;height:140px;border-radius:16px;background:#eef2ff url('images/lab/hero.jpg') center/cover no-repeat;border:1px solid var(--border);}
+.bio{margin:10px 0 14px;color:var(--muted);font-size:.95rem}
+.menu{display:flex;flex-direction:column;gap:6px;margin:10px 0 14px}
+.menu a{padding:8px 10px;border-radius:10px}
+.menu a.active,.menu a:hover{background:#eef2ff;color:#1e3a8a;text-decoration:none}
+.contacts{margin-top:auto;padding-top:10px;border-top:1px dashed var(--border);font-size:.95rem;color:var(--muted)}
+.container{padding:28px}
+.hero h1{margin:0 0 6px;font-size:2rem}
+.hero p{margin:.2rem 0 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+footer{margin-top:30px;color:var(--muted)}
+/* People cards */
+.group{margin-top:18px}
+.grid-people{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.person{background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px;display:flex;gap:12px;align-items:center}
+.photo img{width:64px;height:64px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+.p-name{font-weight:600}
+.p-email a{color:var(--brand)}
+/* Publications search */
+.searchbar{display:flex;gap:10px;align-items:center;border:1px solid var(--border);background:#fff;border-radius:12px;padding:10px 12px;margin:8px 0 16px}
+.searchbar input{flex:1;border:none;outline:none;font-size:1rem}
+.year-head{margin-top:22px;border-left:4px solid var(--brand);padding-left:10px}
+.hl{color:#2563eb;font-weight:600}
+.legend{color:#475569;font-size:.9rem;margin-top:6px}
