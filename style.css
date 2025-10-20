@@ -81,3 +81,12 @@ footer{padding:22px 0;color:var(--muted)}
   border:1px solid var(--border);
   background:#eef2ff center/cover no-repeat;
 }
+
+section[aria-label="campus"] .card img{
+  width: 100%;
+  height: 260px;      /* 你可以改成 220/240/300 等想要的高度 */
+  object-fit: cover;  /* 居中裁剪，保证等高不变形 */
+  border-radius: 12px;
+  display: block;
+}
+
