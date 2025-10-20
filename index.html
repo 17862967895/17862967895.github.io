@@ -49,6 +49,14 @@
       <p>We combine observational, genetic, and experimental evidence to strengthen causal claims in population health.</p>
       <div class="badge-row"><span class="badge">Causal inference</span><span class="badge">MR + Omics</span></div>
     </div>
+    <div class="card">
+      <h3>Adaptable models</h3>
+      <p>We build transfer learning pipelines to adapt proteomic predictors from general cohorts to high-risk subgroups.</p>
+      <div class="badge-row"><span class="badge">Transfer learning</span><span class="badge">Re-weighted survival</span></div>
+    </div>
+</div>
+  </div>
+</section>
 
 <section class="grid" aria-label="campus">
   <article class="card">
@@ -60,14 +68,7 @@
 </section>
 
 <footer>© <span id="year"></span> ZENG LAB. Deployed on GitHub Pages.</footer>
-<script>
-const fi=document.getElementById('fileInput');const gy=document.getElementById('gallery');
-function addThumb(src){{const d=document.createElement('div');d.className='thumb';const i=new Image();i.src=src;d.appendChild(i);gy.appendChild(d);}}
-function handleFiles(fs){{for(const f of fs){{if(!f.type.startsWith('image/'))continue;const r=new FileReader();r.onload=e=>addThumb(e.target.result);r.readAsDataURL(f);}}}}
-if(fi){{fi.addEventListener('change',e=>handleFiles(e.target.files));const up=fi.closest('.uploader');up.addEventListener('dragover',e=>{{e.preventDefault();up.style.borderColor='#94a3b8';}});up.addEventListener('dragleave',e=>{{up.style.borderColor='var(--border)';}});up.addEventListener('drop',e=>{{e.preventDefault();up.style.borderColor='var(--border)';handleFiles(e.dataTransfer.files);}});}}
-</script>
-
-  </main>
+</main>
 </div>
 <script>document.querySelectorAll('#year').forEach(s=>s.textContent=new Date().getFullYear());</script>
 </body>
