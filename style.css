@@ -84,9 +84,38 @@ footer{padding:22px 0;color:var(--muted)}
 
 section[aria-label="campus"] .card img{
   width: 100%;
-  height: 260px;      /* 你可以改成 220/240/300 等想要的高度 */
+  height: 260px;      /* 可以改成 220/240/300 等想要的高度 */
   object-fit: cover;  /* 居中裁剪，保证等高不变形 */
   border-radius: 12px;
   display: block;
+}
+/* News list with thumbnails */
+.news-item{
+  display: grid;
+  grid-template-columns: 120px 1fr;   /* 缩略图 + 文本 */
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.news-thumb.bg{
+  width: 110px;
+  height: 72px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #eef2ff center/cover no-repeat;
+}
+
+.news-date{
+  color: var(--muted);
+  font-weight: 600;
+}
+
+@media (max-width: 520px){
+  .news-item{ grid-template-columns: 100px 1fr; }
+  .news-thumb.bg{ width: 100px; height: 66px; }
 }
 
