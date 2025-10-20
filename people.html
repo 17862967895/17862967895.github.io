@@ -9,7 +9,8 @@
     .group { margin-top: 18px; }
     .grid-people { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
     .person { background:#fff; border:1px solid var(--border); border-radius:16px; padding:12px; display:flex; gap:12px; align-items:center; }
-    .photo img { width:64px; height:64px; object-fit:cover; border-radius:12px; border:1px solid var(--border); }
+    .photo.bg { width:64px; height:64px; border-radius:12px; border:1px solid var(--border);
+  background:#eef2ff center/cover no-repeat; }
     .p-name { font-weight:600; }
     .p-email a { color: var(--brand); }
   </style>
@@ -47,7 +48,7 @@
       <div class="grid-people">
         
       <div class="person">
-        <div class="photo"><img src="images/lab/曾平.png" alt="曾平 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="曾平 photo" style="background-image:url('images/lab/曾平.png');"></div>
         <div class="info">
           <div class="p-name">曾平</div>
           <div class="p-email"><a href="mailto:zpstat@xzhmu.edu.cn">zpstat@xzhmu.edu.cn</a></div>
@@ -56,7 +57,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/王婷.jpg" alt="王婷 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="王婷 photo" style="background-image:url('images/people/王婷.jpg');"></div>
         <div class="info">
           <div class="p-name">王婷</div>
           <div class="p-email"><a href="mailto:wangtgw@163.com">wangtgw@163.com</a></div>
@@ -65,7 +66,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/郑楚.jpg" alt="郑楚 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="郑楚 photo" style="background-image:url('images/people/郑楚.jpg');"></div>
         <div class="info">
           <div class="p-name">郑楚</div>
           <div class="p-email"><a href="mailto:zhengchufory@xzhmu.edu.cn">zhengchufory@xzhmu.edu.cn</a></div>
@@ -74,7 +75,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/王可.jpg" alt="王可 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="王可 photo" style="background-image:url('images/people/王可.jpg');"></div>
         <div class="info">
           <div class="p-name">王可</div>
           <div class="p-email"><a href="mailto:xzmuwk@xzhmu.edu.cn">xzmuwk@xzhmu.edu.cn</a></div>
@@ -90,7 +91,7 @@
       <div class="grid-people">
         
       <div class="person">
-        <div class="photo"><img src="images/people/张浩.JPG" alt="张浩 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="张浩 photo" style="background-image:url('images/people/张浩.JPG');"></div>
         <div class="info">
           <div class="p-name">张浩</div>
           <div class="p-email"><a href="mailto:303101210007@stu.xzhmu.edu.cn">303101210007@stu.xzhmu.edu.cn</a></div>
@@ -99,7 +100,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/袁郭静.jpg" alt="袁郭静 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="袁郭静 photo" style="background-image:url('images/people/袁郭静.jpg');"></div>
         <div class="info">
           <div class="p-name">袁郭静</div>
           <div class="p-email"><a href="mailto:304110210057@stu.xzhmu.edu.cn">304110210057@stu.xzhmu.edu.cn</a></div>
@@ -108,7 +109,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/刘颖.jpg" alt="刘颖 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="刘颖 photo" style="background-image:url('images/people/刘颖.jpg');"></div>
         <div class="info">
           <div class="p-name">刘颖</div>
           <div class="p-email"><a href="mailto:302110110924@stu.xzhmu.edu.cn">302110110924@stu.xzhmu.edu.cn</a></div>
@@ -124,7 +125,7 @@
       <div class="grid-people">
         
       <div class="person">
-        <div class="photo"><img src="images/people/刘雨昕.jpg" alt="刘雨昕 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="刘雨昕 photo" style="background-image:url('images/people/刘雨昕.jpg');"></div>
         <div class="info">
           <div class="p-name">刘雨昕</div>
           <div class="p-email"><a href="mailto:303110110920@stu.xzhmu.edu.cn">303110110920@stu.xzhmu.edu.cn</a></div>
@@ -133,7 +134,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/严羽.jpg" alt="严羽 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="严羽 photo" style="background-image:url('images/people/严羽.jpg');"></div>
         <div class="info">
           <div class="p-name">严羽</div>
           <div class="p-email"><a href="mailto:303110120945@stu.xzhmu.edu.cn">303110120945@stu.xzhmu.edu.cn</a></div>
@@ -142,7 +143,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/祁继柯.jpg" alt="祁继柯 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="祁继柯 photo" style="background-image:url('images/people/祁继柯.jpg');"></div>
         <div class="info">
           <div class="p-name">祁继柯</div>
           <div class="p-email"><a href="mailto:303110110921@stu.xzhmu.edu.cn">303110110921@stu.xzhmu.edu.cn</a></div>
@@ -151,7 +152,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/林华.jpg" alt="林华 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="林华 photo" style="background-image:url('images/people/林华.jpg');"></div>
         <div class="info">
           <div class="p-name">林华</div>
           <div class="p-email"><a href="mailto:304110120919@stu.xzhmu.edu.cn">304110120919@stu.xzhmu.edu.cn</a></div>
@@ -160,7 +161,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/姜昱辰.jpg" alt="姜昱辰 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="姜昱辰 photo" style="background-image:url('images/people/姜昱辰.jpg');"></div>
         <div class="info">
           <div class="p-name">姜昱辰</div>
           <div class="p-email"><a href="mailto:304110110881@stu.xzhmu.edu.cn">304110110881@stu.xzhmu.edu.cn</a></div>
@@ -169,7 +170,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/王心怡.jpg" alt="王心怡 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="王心怡 photo" style="background-image:url('images/people/王心怡.jpg');"></div>
         <div class="info">
           <div class="p-name">王心怡</div>
           <div class="p-email"><a href="mailto:304110110893@stu.xzhmu.edu.cn">304110110893@stu.xzhmu.edu.cn</a></div>
@@ -178,7 +179,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/姚杰.jpg" alt="姚杰 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="姚杰 photo" style="background-image:url('images/people/姚杰.jpg');"></div>
         <div class="info">
           <div class="p-name">姚杰</div>
           <div class="p-email"><a href="#">12345678</a></div>
@@ -187,7 +188,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/张飞.jpg" alt="张飞 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="张飞 photo" style="background-image:url('images/people/张飞.jpg');"></div>
         <div class="info">
           <div class="p-name">张飞</div>
           <div class="p-email"><a href="#">12345678</a></div>
@@ -196,7 +197,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/常舒雯.jpg" alt="常舒雯 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="常舒雯 photo" style="background-image:url('images/people/常舒雯.jpg');"></div>
         <div class="info">
           <div class="p-name">常舒雯</div>
           <div class="p-email"><a href="#">12345678</a></div>
@@ -205,7 +206,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/赵思宇.jpg" alt="赵思宇 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="赵思宇 photo" style="background-image:url('images/people/赵思宇.jpg');"></div>
         <div class="info">
           <div class="p-name">赵思宇</div>
           <div class="p-email"><a href="#">12345678</a></div>
@@ -221,7 +222,7 @@
       <div class="grid-people">
         
       <div class="person">
-        <div class="photo"><img src="images/people/杲统宇.jpg" alt="杲统宇 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="杲统宇 photo" style="background-image:url('images/people/杲统宇.jpg');"></div>
         <div class="info">
           <div class="p-name">杲统宇</div>
           <div class="p-email"><a href="mailto:302110120936@stu.xzhmu.edu.cn">302110120936@stu.xzhmu.edu.cn</a></div>
@@ -230,7 +231,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/张硕.jpg" alt="张硕 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="张硕 photo" style="background-image:url('images/people/张硕.jpg');"></div>
         <div class="info">
           <div class="p-name">张硕</div>
           <div class="p-email"><a href="mailto:biostatszhang@163.com">biostatszhang@163.com</a></div>
@@ -239,7 +240,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/陈珂莹.jpg" alt="陈珂莹 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="陈珂莹 photo" style="background-image:url('images/people/陈珂莹.jpg');"></div>
         <div class="info">
           <div class="p-name">陈珂莹</div>
           <div class="p-email"><a href="mailto:302110110923@stu.xzhmu.edu.cn">302110110923@stu.xzhmu.edu.cn</a></div>
@@ -248,7 +249,7 @@
     
 
       <div class="person">
-        <div class="photo"><img src="images/people/蒋舟.jpg" alt="蒋舟 photo" onerror="this.src='images/people/placeholder.jpg';"/></div>
+        <div class="photo bg" role="img" aria-label="蒋舟 photo" style="background-image:url('images/people/蒋舟.jpg');"></div>
         <div class="info">
           <div class="p-name">蒋舟</div>
           <div class="p-email"><a href="mailto:zhoujiang0031@hust.edu.cn">zhoujiang0031@hust.edu.cn</a></div>
