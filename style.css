@@ -55,9 +55,7 @@ h2{font-size:1.6rem;margin:18px 0 8px}
 .person .avatar{width:72px;height:72px}
 .person h4{margin:0 0 6px}
 .person .role{color:var(--muted);font-size:.95rem}
-/* News */
-.news-item{grid-column:span 12;border:1px solid var(--border);border-radius:12px;padding:14px;background:#fff;display:flex;gap:14px}
-.news-date{flex:0 0 110px;color:var(--muted)}
+
 /* Upload */
 .uploader{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:10px}
