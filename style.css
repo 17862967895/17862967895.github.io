@@ -78,37 +78,33 @@ footer{padding:22px 0;color:var(--muted)}
 .news-item .news-text{ grid-column: 2 / -1; }
 .news-item .news-date{ margin-bottom: 4px; display: inline-block; color: var(--muted); font-weight:600; }
 .news-item h3{ margin: 2px 0 0; }
-/* === News thumbnails (force visible & layout) === */
+
+/* === News thumbnails (background-image, like people.photo) === */
 .news-item{
-  display: grid;                  /* 覆盖旧的 flex 布局 */
-  grid-template-columns: 120px 1fr; /* 左缩略图 + 右文本 */
+  display: grid;
+  grid-template-columns: 120px 1fr; /* left thumb + right text */
   gap: 12px;
   align-items: start;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px;
 }
 
 .news-thumb.bg{
   width: 110px;
-  height: 72px;                   /* 没高度就看不见，这里强制给 */
-  background: #eef2ff center/cover no-repeat;
-  border: 1px solid var(--border);
+  height: 72px;
   border-radius: 10px;
-  display: block;                 /* 保证是可见盒子 */
+  border: 1px solid var(--border);
+  background: #eef2ff center/cover no-repeat;
+  display: block;
 }
 
-.news-text{                        /* 文字块放右侧整列 */
-  grid-column: 2 / -1;
-}
+.news-text{ grid-column: 2 / -1; }
+.news-date{ color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+.news-item h3{ margin: 0; color: var(--text); font-weight: 800; line-height: 1.25; }
 
-.news-item h3{                     /* 黑色简讯标题 */
-  margin: 0;
-  color: var(--text);
-  font-weight: 800;
-  line-height: 1.25;
+@media (max-width: 520px){
+  .news-item{ grid-template-columns: 100px 1fr; }
+  .news-thumb.bg{ width: 100px; height: 66px; }
 }
-
-.news-date{                        /* 右上角小日期 */
-  color: var(--muted);
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
