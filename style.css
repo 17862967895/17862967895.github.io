@@ -71,3 +71,13 @@ footer{padding:22px 0;color:var(--muted)}
   .container{padding:20px}
   .card,.person{grid-column:span 12}
 }
+
+
+/* Display headshots using CSS background-image (stable, like sidebar) */
+.photo.bg{
+  width:64px;
+  height:64px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:#eef2ff center/cover no-repeat;
+}
